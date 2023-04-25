@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
-import '../styles/global.css'
+import '../styles/global.css';
+import PromptInput from '@/components/PromptInput';
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body>
         <Header/>
 
+        <PromptInput />
         {/* Prompt Input */}
         {children}
         </body>

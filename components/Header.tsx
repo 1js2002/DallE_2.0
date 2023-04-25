@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 type Props = {}
 
 function Header({}: Props) {
   return (
-    <header>
-        <div>
+    <header className="flex p-5 justify-between sticky top-0 bg-white z-50 shadow-md">
+        <div className="flex space-x-2 items-center">
         <Image
           src="https://www.svgrepo.com/show/306500/openai.svg"
           alt="logo"
@@ -22,6 +23,18 @@ function Header({}: Props) {
             </h2>
         </div>
         </div>
+        <div className="flex text-xs md:text-base divide-x items-center text-gray-500">
+          <Link href="https://www.google.com"
+            className="px-2 font-light text-right"
+          >
+            wanna be friends with me?
+          </Link> 
+          <Link href="https://www.github.com/1js2002/"
+            className="px-2 font-light" >
+              Github repo
+          </Link> 
+        </div>
+
     </header>
   )
 }
